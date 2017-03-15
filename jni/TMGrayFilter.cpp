@@ -10,15 +10,15 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-SharedClass::SharedClass() {
-    value = 0;
-}
-
-SharedClass::~SharedClass() {
+TMGrayFilter::TMGrayFilter() {
     
 }
 
-int SharedClass::toGray(Mat img, Mat& gray)
+TMGrayFilter::~TMGrayFilter() {
+    
+}
+
+int TMGrayFilter::toGray(Mat img, Mat& gray)
 {
     cvtColor(img, gray, CV_RGBA2GRAY);
     

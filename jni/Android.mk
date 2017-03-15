@@ -3,18 +3,18 @@ LOCAL_PATH := $(call my-dir)
 # Static Library(.a) Setting
 include $(CLEAR_VARS)
 
-# OPENCV Setting, Change to your OpenCV path!!
-OPENCVROOT:= /Users/perchten/Library/Android/OpenCV
-OPENCV_INSTALL_MODULES:=on
-OPENCV_LIB_TYPE:=SHARED
+# OPENCV Setting, Change to your OpenCV path
+OPENCVROOT := /Users/rowena/Library/Android/OpenCV
+OPENCV_INSTALL_MODULES := on
+OPENCV_LIB_TYPE := SHARED
 
 include ${OPENCVROOT}/sdk/native/jni/OpenCV.mk
 
 # Static Library Name
-LOCAL_MODULE := TMGrayFilterModule
+LOCAL_MODULE := TMGrayFilterStaticModule
 
 # Source File
-LOCAL_SRC_FILES := TMGrayFillter.cpp
+LOCAL_SRC_FILES := TMGrayFilter.cpp
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -23,8 +23,8 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 
 # Dummy Library Name
-LOCAL_MODULE    := garbege
+LOCAL_MODULE := TMGrayFilterSharedModule
 
 # Static Library Name
-LOCAL_STATIC_LIBRARIES := TMGrayFilterModule
+LOCAL_STATIC_LIBRARIES := TMGrayFilterStaticModule
 include $(BUILD_SHARED_LIBRARY)
