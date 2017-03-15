@@ -3,6 +3,6 @@ Android JNI Example Using OpenCV
 
 ## How to use
 ```
-cd <project>jni
+cd <project>/jni
 $ <ndk>/ndk-build
 ```
